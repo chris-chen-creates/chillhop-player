@@ -2,6 +2,8 @@
 
 I created this to grasp a better understanding of building with React and it's creative applications. 
 
+### [Check it out here](https://jovial-pare-b545f9.netlify.app/)
+
 ## Resources Used
 
 - [Dev Ed on Youtube](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q) was a huge help! I would try working through it on my own and then reference his tutorials when I would get too stuck to figure it out (in a reasonable amount of time)
