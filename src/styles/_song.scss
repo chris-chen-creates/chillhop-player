@@ -6,7 +6,7 @@
   justify-content: center;
   color: lightcyan;
   img {
-    width: 20%;
+    width: 25%;
     border-radius: 50%;
   }
   h2 {
@@ -14,7 +14,27 @@
     color: #eee5ee;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: rgb(191, 246, 246);
+  }
+}
+@media screen and (max-width: 768px) {
+  .song-container {
+    img {
+      width: 80%;
+    }
+  }
+}
+
+.rotateSong {
+  animation: rotate 20s linear forwards infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

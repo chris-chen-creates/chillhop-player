@@ -5,6 +5,7 @@ import Song from './components/Song'
 import Library from './components/Library'
 import Nav from './components/Nav'
 // Import Util
+import { playAudio } from './util'
 import data from './data'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     currentTime: 0,
     duration: 0,
     animationPercentage: 0,
+    volume: 0,
   })
   const [libraryStatus, setLibraryStatus] = useState(false)
   const timeUpdateHandler = (e) => {
@@ -33,18 +35,24 @@ function App() {
       currentTime: current,
       duration,
       animationPercentage: animation,
+      volume: e.target.volume,
     })
   }
   const songEndHandler = async () => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id)
     await setCurrentSong(songs[(currentIndex + 1) % songs.length])
-    if (isPlaying) audioRef.current.play()
+    playAudio(isPlaying, audioRef)
+    return
   }
 
   return (
-    <div className='App'>
-      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song currentSong={currentSong} />
+    <div className={`App ${libraryStatus ? 'library-active' : ''}`}>
+      <Nav
+        libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
+        currentSong={currentSong}
+      />
+      <Song isPlaying={isPlaying} currentSong={currentSong} />
       <Player
         audioRef={audioRef}
         setIsPlaying={setIsPlaying}
