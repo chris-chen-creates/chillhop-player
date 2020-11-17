@@ -5,7 +5,6 @@ import {
   faAngleLeft,
   faAngleRight,
   faPause,
-  faVolumeDown,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { playAudio } from '../util'

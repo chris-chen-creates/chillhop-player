@@ -11,6 +11,7 @@ const Nav = ({ setLibraryStatus, libraryStatus, currentSong }) => {
           style={{ color: `${currentSong.color[0]}` }}
           href={currentSong.link}
           target='_blank'
+          rel='noreferrer'
         >
           Click here to support the artist
         </a>
