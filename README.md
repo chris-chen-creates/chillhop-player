@@ -12,4 +12,4 @@ I created this to grasp a better understanding of building with React and it's c
 ## Content Credit
 
 
-[<img src="https://i.imgur.com/sJrzDGs.png">](https://chillhop.ffm.to/creatorcred)
+[<img src="https://i.imgur.com/sJrzDGs.png">](https://chillhop.ffm.to/creatorcred){target="_blank"}
